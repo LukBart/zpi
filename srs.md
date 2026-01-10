@@ -255,3 +255,84 @@ Katarzyna zarządza 5-osobowym zespołem HR w firmie produkcyjnej (400 pracownik
 > *"Chcę wiedzieć, kto w moim zespole ma potencjał na lidera, a kto może odejść. I chcę to wiedzieć zanim będzie za późno."*
 
 Tomek zarządza 12-osobowym zespołem sprzedaży. Potrzebuje prostych narzędzi do oceny i rozwoju ludzi.
+
+### 2.3. Ograniczenia Projektowe i Implementacyjne
+
+#### Ograniczenia technologiczne
+
+| Kategoria | Ograniczenie | Uzasadnienie |
+|-----------|--------------|--------------|
+| **Backend** | Python 3.11+ / FastAPI lub Node.js 20+ | Wymagana dobra obsługa ML i async |
+| **Frontend** | React 18+ / TypeScript | Standard rynkowy, duża społeczność |
+| **Baza danych** | PostgreSQL 15+ | Wsparcie dla JSON, full-text search |
+| **Cache/Queue** | Redis | Sesje, kolejki zadań, real-time |
+| **ML/AI** | Python + scikit-learn / spaCy | Matching Engine, Retention AI |
+| **Wyszukiwarka** | Elasticsearch | Wyszukiwanie semantyczne CV |
+| **Kontenery** | Docker + Docker Compose | Deployment, środowiska deweloperskie |
+| **Hosting** | Minimum 8GB RAM, 4 vCPU dla MVP | Wymagania ML i Elasticsearch |
+
+#### Ograniczenia organizacyjne
+
+| Kategoria | Ograniczenie | Uwagi |
+|-----------|--------------|-------|
+| **Zespół** | 5-7 deweloperów | Ograniczona dostępność (projekt uczelniany) |
+| **Czas** | MVP w 4 miesiące | Deadline wynikający z harmonogramu studiów |
+| **Budżet** | Brak budżetu na płatne usługi | Tylko open-source i darmowe tiers |
+| **Metodyka** | Scrum, sprinty 2-tygodniowe | Wymóg przedmiotu |
+| **Dokumentacja** | SRS, dokumentacja techniczna w repo | Wymóg oddania projektu |
+| **Code Review** | Wymagane PR z min. 1 review | Jakość kodu |
+
+#### Ograniczenia prawne i środowiskowe
+
+| Kategoria | Ograniczenie | Wpływ na system |
+|-----------|--------------|-----------------|
+| **RODO (GDPR)** | Pełna zgodność | Szyfrowanie danych, prawo do usunięcia, zgody |
+| **RODO - retencja** | Dane kandydatów max 2 lata | Automatyczne usuwanie danych |
+| **RODO - dostęp** | Prawo dostępu do swoich danych | Eksport danych użytkownika |
+| **Kodeks Pracy** | Zgodność z polskim prawem pracy | Wzory umów, okresy wypowiedzenia |
+| **Podpis elektroniczny** | eIDAS - kwalifikowany podpis | Integracja z dostawcą podpisu |
+| **Accessibility** | WCAG 2.1 AA | Dostępność dla osób z niepełnosprawnościami |
+| **Regulacje uczelniane** | Projekt akademicki | Kod jako własność intelektualna studentów |
+
+### 2.4. Założenia Projektowe
+
+#### Założenia biznesowe
+
+| ID | Założenie | Ryzyko jeśli nieprawdziwe |
+|----|-----------|---------------------------|
+| **ZB-01** | Firma docelowa zatrudnia 100-1000 pracowników | Za mała firma = zbędne funkcje; za duża = problemy wydajnościowe |
+| **ZB-02** | Istnieje dział HR z min. 2 osobami | Brak HR = brak użytkowników systemu |
+| **ZB-03** | Firma prowadzi aktywną rekrutację (min. 5 wakatów/miesiąc) | Brak rekrutacji = moduł nieużywany |
+| **ZB-04** | Pracownicy mają dostęp do komputera/smartfona | Brak dostępu = brak adopcji |
+| **ZB-05** | Firma ma już podstawowe systemy IT (email, AD) | Brak = problemy z integracją |
+
+#### Założenia techniczne
+
+| ID | Założenie | Ryzyko jeśli nieprawdziwe |
+|----|-----------|---------------------------|
+| **ZT-01** | Użytkownicy korzystają z nowoczesnych przeglądarek (Chrome, Firefox, Edge - ostatnie 2 wersje) | Stare przeglądarki = problemy z UI |
+| **ZT-02** | Dostępne stabilne łącze internetowe min. 10 Mbps | Wolne łącze = timeout przy uploadzie CV |
+| **ZT-03** | CV są w formatach PDF/DOCX/DOC | Inne formaty = błędy parsowania |
+| **ZT-04** | Dostępna integracja OAuth2 z firmowym IdP | Brak = osobne loginy, security risk |
+| **ZT-05** | Elasticsearch dostępny jako managed service lub self-hosted | Brak = brak wyszukiwania semantycznego |
+
+#### Założenia dotyczące użytkowników
+
+| ID | Założenie | Ryzyko jeśli nieprawdziwe |
+|----|-----------|---------------------------|
+| **ZU-01** | HR i menedżerowie przejdą szkolenie z systemu (min. 2h) | Brak szkolenia = niska adopcja |
+| **ZU-02** | Kandydaci są przyzwyczajeni do portali rekrutacyjnych | Nieintuicyjny UX = porzucone aplikacje |
+| **ZU-03** | Pracownicy będą aktywnie korzystać z systemu feedbacku | Brak adopcji = puste metryki |
+| **ZU-04** | Menedżerowie będą prowadzić regularne 1:1 | Brak spotkań = nieaktualne dane w systemie |
+
+#### Zależności zewnętrzne
+
+| ID | Zależność | Alternatywa |
+|----|-----------|-------------|
+| **ZZ-01** | API LinkedIn do publikacji ofert | Ręczna publikacja |
+| **ZZ-02** | Dostawca e-podpisu (np. Autenti, DocuSign) | Podpis offline + skan |
+| **ZZ-03** | Serwer SMTP do wysyłki maili | Zewnętrzny serwis (SendGrid, Mailgun) |
+| **ZZ-04** | Active Directory / LDAP firmy | Lokalne konta w systemie |
+| **ZZ-05** | System kalendarzowy (Google/Outlook) | Manualnie uzgadniane terminy |
+
+---
