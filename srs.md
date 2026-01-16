@@ -1208,3 +1208,281 @@ def schedule_interview(candidate_email, recruiter_email, datetime_utc, duration_
 - **And:** Jan dostaje powiadomienie zarówno w Slacku jak i w HRflow
 
 ---
+
+### 4.4. Moduł Analityki HR
+
+#### WF-ANA-001: Predykcja Rotacji Pracowników (Retention AI)
+
+**Opis:** Moduł wykorzystujący machine learning do identyfikacji pracowników zagrożonych odejściem na podstawie wzorców zachowań, wyników ankiet i danych systemowych.
+
+**Historyjka Użytkownika:**
+> Jako HR Manager,  
+> chcę wiedzieć z wyprzedzeniem którzy kluczowi pracownicy mogą odejść,  
+> abym mógł podjąć działania retencyjne zanim będzie za późno.
+
+**Cel Biznesowy:** Obniżenie wskaźnika rotacji kluczowych specjalistów o 15% w ciągu roku, poprzez wykrywanie ryzyka odejścia na 30 dni przed rezygnacją.
+
+**Warunki Wstępne:**
+- Pracownik jest w systemie min. 6 miesięcy (dane do analizy)
+- Skonfigurowane ankiety pulsujące
+- Model ML wytrenowany na danych historycznych
+
+**Warunki Końcowe:**
+- HR/Menedżer widzi alert o ryzyku
+- Uruchomiony proces retencyjny
+
+**Kryteria Akceptacji:**
+
+**WF-ANA-001-01: Dashboard ryzyka rotacji (Scenariusz główny)**
+- **Given:** Jestem HR Managerem z dostępem do analityki
+- **When:** Otwieram dashboard "Retention Risk"
+- **Then:** Widzę listę pracowników posortowaną wg ryzyka odejścia (%, kolor: zielony/żółty/czerwony)
+- **And:** Dla pracowników z ryzykiem >70% widzę główne czynniki ryzyka (np. "brak awansu 2 lata", "spadek engagement score")
+- **And:** Mogę filtrować po dziale, stanowisku, stażu
+
+**WF-ANA-001-02: Alert o wysokim ryzyku (Scenariusz główny)**
+- **Given:** Ryzyko odejścia programisty Jana Kowalskiego wzrosło z 40% do 75% (próg alertu: 70%)
+- **When:** System przelicza ryzyko (codziennie o 6:00)
+- **Then:** Menedżer Jana i HR otrzymują email "Alert: Wysokie ryzyko odejścia - Jan Kowalski"
+- **And:** W alercie są sugerowane działania: "Zaplanuj rozmowę 1:1", "Sprawdź możliwości awansu", "Przejrzyj wynagrodzenie vs. rynek"
+
+**WF-ANA-001-03: Czynniki wpływające na ryzyko (Scenariusz główny)**
+- **Given:** Kliknę w konkretnego pracownika na dashboardzie
+- **When:** Otwieram szczegóły
+- **Then:** Widzę rozbicie ryzyka na czynniki z wagami: np. "Brak podwyżki 18 miesięcy (waga 30%)", "Niska ocena w ankiecie pulsującej (waga 25%)", "Brak rozwoju kompetencji (waga 20%)"
+- **And:** Przy każdym czynniku widzę rekomendację działania
+
+**WF-ANA-001-04: Ankieta pulsująca (Scenariusz główny)**
+- **Given:** Jestem pracownikiem, jest pierwszy poniedziałek miesiąca
+- **When:** Dostaję powiadomienie o ankiecie
+- **Then:** Ankieta ma max 5 pytań (np. "Jak oceniasz swoje samopoczucie w pracy 1-10?", "Czy czujesz się doceniany?")
+- **And:** Wypełnienie zajmuje max 2 minuty
+- **And:** Odpowiedzi są anonimowe dla menedżera (widzi tylko średnią zespołu), ale system używa ich do modelu retencji
+
+---
+
+#### WF-ANA-002: System Oceny Potencjału (9-box Grid)
+
+**Opis:** Narzędzie dla menedżerów do oceny pracowników w dwóch wymiarach: wydajność (performance) i potencjał rozwojowy, wspierające planowanie sukcesji.
+
+**Historyjka Użytkownika:**
+> Jako menedżer,  
+> chcę mieć ustrukturyzowane narzędzie do oceny potencjału moich ludzi,  
+> abym mógł planować ich rozwój i identyfikować przyszłych liderów.
+
+**Cel Biznesowy:** Zidentyfikowanie następców dla 90% kluczowych stanowisk menedżerskich w ciągu 6 miesięcy.
+
+**Warunki Wstępne:**
+- Menedżer ma zespół min. 3 osoby
+- Trwa okres ocen (np. koniec kwartału)
+
+**Warunki Końcowe:**
+- Każdy pracownik ma przypisaną pozycję w 9-box
+- HR ma raport talent pool
+- Zdefiniowane plany rozwojowe dla High Potentials
+
+**Kryteria Akceptacji:**
+
+**WF-ANA-002-01: Ocena pracownika w 9-box (Scenariusz główny)**
+- **Given:** Jestem menedżerem, rozpoczął się okres ocen
+- **When:** Otwieram profil pracownika w sekcji "Ocena potencjału"
+- **Then:** Widzę matrycę 3x3 (oś X: Performance Low/Medium/High, oś Y: Potential Low/Medium/High)
+- **And:** Dla każdej osi mam suwak z uzasadnieniem (np. "High Performance because: przekroczył cele o 20%")
+- **And:** System automatycznie umieszcza pracownika w odpowiedniej kratce
+
+**WF-ANA-002-02: Widok zespołu na 9-box (Scenariusz główny)**
+- **Given:** Oceniłem wszystkich pracowników swojego zespołu
+- **When:** Otwieram widok "Mój zespół - Talent Grid"
+- **Then:** Widzę wszystkich pracowników rozłożonych na matrycy (jako avatary lub inicjały)
+- **And:** Widzę statystyki: "High Potential: 3 osoby", "Solid Performers: 5 osób", "Underperformers: 1 osoba"
+- **And:** Mogę porównać z poprzednim kwartałem (kto awansował, kto spadł)
+
+**WF-ANA-002-03: Planowanie sukcesji (Scenariusz główny)**
+- **Given:** Jestem HR Managerem, mam zdefiniowane kluczowe stanowiska w firmie
+- **When:** Otwieram moduł "Planowanie sukcesji"
+- **Then:** Widzę listę kluczowych stanowisk z informacją: obecny holder, gotowość następcy (czerwony/żółty/zielony), kandydaci na następcę
+- **And:** Mogę przypisać kandydatów do stanowisk z oceną "gotowy teraz", "gotowy za 1-2 lata", "wymaga rozwoju"
+- **And:** System alertuje jeśli stanowisko nie ma żadnego następcy
+
+---
+
+### 4.5. Moduł Kafeterii Benefitowej
+
+#### WF-BEN-001: Elastyczna Platforma Benefitowa
+
+**Opis:** System pozwalający pracownikom samodzielnie wybierać benefity z dostępnej puli punktów, z możliwością wymiany na usługi prozdrowotne, szkoleniowe i lifestyle.
+
+**Historyjka Użytkownika:**
+> Jako pracownik,  
+> chcę samodzielnie decydować na co wydać mój budżet benefitowy,  
+> abym mógł wybrać rzeczy które naprawdę mi się przydadzą, zamiast dostawać narzucone benefity.
+
+**Cel Biznesowy:** Zwiększenie utylizacji budżetu szkoleniowo-benefitowego do 95% w ciągu roku (z obecnych 60%).
+
+**Warunki Wstępne:**
+- Pracownik ma przypisany budżet punktów
+- Skonfigurowane są kategorie i dostawcy benefitów
+
+**Warunki Końcowe:**
+- Pracownik wykorzystał punkty
+- Zamówienie trafiło do dostawcy
+- HR ma raport wykorzystania
+
+**Kryteria Akceptacji:**
+
+**WF-BEN-001-01: Przeglądanie kafeterii (Scenariusz główny)**
+- **Given:** Jestem pracownikiem z budżetem 500 punktów miesięcznie
+- **When:** Otwieram "Kafeterię benefitów"
+- **Then:** Widzę kategorie: Zdrowie, Sport, Kultura, Rozwój, Lifestyle
+- **And:** W każdej kategorii widzę dostępne opcje z ceną w punktach
+- **And:** Na górze widzę moje saldo: "Dostępne: 500 pkt, Wykorzystane: 0 pkt"
+
+**WF-BEN-001-02: Zakup benefitu (Scenariusz główny)**
+- **Given:** Mam 500 punktów, chcę kupić karnet na siłownię za 200 pkt
+- **When:** Wybieram "MultiSport Classic", klikam "Zamów"
+- **Then:** Punkty są pobierane z mojego salda (zostaje 300 pkt)
+- **And:** Otrzymuję potwierdzenie z instrukcją aktywacji karnetu
+- **And:** W historii widzę transakcję
+
+**WF-BEN-001-03: Brak wystarczających punktów (Scenariusz alternatywny)**
+- **Given:** Mam 100 punktów, próbuję kupić benefit za 200 pkt
+- **When:** Klikam "Zamów"
+- **Then:** System wyświetla "Niewystarczająca liczba punktów. Brakuje: 100 pkt"
+- **And:** Sugeruje tańsze alternatywy lub możliwość doładowania z własnej kieszeni
+
+---
+
+### 4.6. Moduł Offboardingu
+
+#### WF-OFF-001: Automatyczne Odbieranie Dostępów
+
+**Opis:** System automatycznie dezaktywuje dostępy do wszystkich systemów IT w momencie zakończenia zatrudnienia, poprzez integrację z Active Directory i innymi systemami.
+
+**Historyjka Użytkownika:**
+> Jako Administrator IT,  
+> chcę aby dostępy odchodzącego pracownika były automatycznie odbierane,  
+> abym nie musiał pamiętać o każdym systemie i nie ryzykować wycieku danych.
+
+**Cel Biznesowy:** Zautomatyzowanie procesu odbierania dostępów do systemów IT w 100% przypadków w momencie rozwiązania umowy (redukcja ryzyka wycieku danych).
+
+**Warunki Wstępne:**
+- Pracownik ma zakończoną umowę (data końca zatrudnienia)
+- Skonfigurowana integracja z AD/LDAP i innymi systemami
+
+**Warunki Końcowe:**
+- Wszystkie dostępy są odebrane
+- IT ma raport z wykonanych akcji
+- Konto jest zarchiwizowane (nie usunięte)
+
+**Kryteria Akceptacji:**
+
+**WF-OFF-001-01: Automatyczna dezaktywacja w dniu zakończenia (Scenariusz główny)**
+- **Given:** Pracownik Jan Kowalski ma ostatni dzień pracy 31.01.2025
+- **When:** Nastaje 31.01.2025, godzina 23:59
+- **Then:** System automatycznie: wyłącza konto AD, odbiera dostęp do email, dezaktywuje VPN, odbiera dostępy do systemów wewnętrznych (Jira, Confluence, GitHub)
+- **And:** IT Admin otrzymuje raport z listą odebranych dostępów
+- **And:** Menedżer otrzymuje powiadomienie "Dostępy Jana Kowalskiego zostały odebrane"
+
+**WF-OFF-001-02: Lista kontrolna offboardingu (Scenariusz główny)**
+- **Given:** Jestem HR Adminem, pracownik złożył wypowiedzenie
+- **When:** Rozpoczynam proces offboardingu
+- **Then:** System generuje checklistę: zwrot sprzętu, przekazanie obowiązków, rozmowa exit interview, dostępy do odebrania
+- **And:** Mogę przypisać zadania do odpowiednich osób (IT, menedżer, HR)
+- **And:** System śledzi wykonanie i przypomina o zaległych zadaniach
+
+**WF-OFF-001-03: Exit interview (Scenariusz główny)**
+- **Given:** Pracownik jest w okresie wypowiedzenia
+- **When:** HR wysyła zaproszenie na exit interview
+- **Then:** Pracownik może wypełnić ankietę online lub umówić się na rozmowę
+- **And:** Odpowiedzi są zapisywane anonimowo (chyba że pracownik zgodzi się na jawność)
+- **And:** HR widzi zagregowane wyniki exit interviews w analityce
+
+---
+
+#### WF-OFF-002: Program Alumni
+
+**Opis:** Portal dla byłych pracowników umożliwiający utrzymanie kontaktu, networking i potencjalny powrót do firmy w przyszłości.
+
+**Historyjka Użytkownika:**
+> Jako były pracownik,  
+> chcę utrzymać kontakt z firmą i byłymi kolegami,  
+> abym mógł wrócić jeśli pojawi się ciekawa okazja.
+
+**Cel Biznesowy:** Konwersja 20% odchodzących pracowników do programu Alumni w celu przyszłej rekrutacji (boomerang hiring).
+
+**Warunki Wstępne:**
+- Pracownik zakończył zatrudnienie
+- Wyraził zgodę na udział w programie Alumni
+
+**Warunki Końcowe:**
+- Były pracownik ma konto Alumni
+- Może przeglądać oferty i utrzymywać kontakt
+
+**Kryteria Akceptacji:**
+
+**WF-OFF-002-01: Dołączenie do programu Alumni (Scenariusz główny)**
+- **Given:** Kończę pracę w firmie, podczas offboardingu HR pyta czy chcę dołączyć do Alumni
+- **When:** Wyrażam zgodę i podaję prywatny email
+- **Then:** Otrzymuję link do aktywacji konta Alumni
+- **And:** Moje podstawowe dane (imię, stanowisko, okres zatrudnienia) są zachowane
+- **And:** Dane wrażliwe (wynagrodzenie, oceny) są usunięte
+
+**WF-OFF-002-02: Portal Alumni - oferty pracy (Scenariusz główny)**
+- **Given:** Jestem w programie Alumni od 6 miesięcy
+- **When:** Loguję się do portalu Alumni
+- **Then:** Widzę aktualne oferty pracy w firmie z oznaczeniem "Dla Alumni"
+- **And:** Mogę aplikować jednym kliknięciem (moje dane są już w systemie)
+- **And:** Moja aplikacja jest oznaczona jako "Boomerang" i ma priorytet
+
+---
+
+### 4.7. Priorytetyzacja Wymagań Funkcjonalnych
+
+#### Macierz MoSCoW
+
+| ID | Funkcjonalność | Must | Should | Could | Won't (MVP) |
+|----|----------------|------|--------|-------|-------------|
+| WF-REK-001 | Automatyczny Screening CV | ✓ | | | |
+| WF-REK-002 | Semantic Matching Engine | | ✓ | | |
+| WF-REK-003 | Portal Kandydata z tracking | ✓ | | | |
+| WF-REK-004 | Giełda Talentów | | | ✓ | |
+| WF-REK-005 | System Poleceń Pracowniczych | | ✓ | | |
+| WF-REK-006 | Anonimizacja D&I | | | ✓ | |
+| WF-ONB-001 | Cyfrowy obieg dokumentów | ✓ | | | |
+| WF-ONB-002 | Zgrywalizowany onboarding | | ✓ | | |
+| WF-DEV-001 | Platforma LMS | | ✓ | | |
+| WF-DEV-002 | System OKR | | | ✓ | |
+| WF-DEV-003 | Continuous Feedback | | ✓ | | |
+| WF-ANA-001 | Retention AI | | | ✓ | |
+| WF-ANA-002 | 9-box Grid | | | ✓ | |
+| WF-BEN-001 | Kafeteria benefitowa | | | | ✓ |
+| WF-OFF-001 | Automatyczne odbieranie dostępów | ✓ | | | |
+| WF-OFF-002 | Program Alumni | | | | ✓ |
+
+#### Uzasadnienie priorytetów
+
+**Must Have (MVP):**
+- **Screening CV** - bez tego system nie ma sensu, to core funkcjonalność
+- **Portal Kandydata** - kluczowe dla Candidate Experience (cel: cNPS +50)
+- **Cyfrowy obieg dokumentów** - bezpośrednio wpływa na cel redukcji czasu kadr o 80%
+- **Odbieranie dostępów** - krytyczne dla bezpieczeństwa, zero tolerancji na błędy
+
+**Should Have (v1.1):**
+- **Semantic Matching** - zwiększa wartość screeningu, ale wymaga danych do treningu
+- **System poleceń** - ważny cel biznesowy, ale firma może funkcjonować bez niego
+- **Gamifikowany onboarding** - wpływa na Time-to-Productivity, ale można zacząć od prostszej wersji
+- **LMS** - ważne dla rozwoju, ale można początkowo używać zewnętrznych platform
+- **Continuous Feedback** - kulturowa zmiana wymaga czasu
+
+**Could Have (v1.2+):**
+- **Giełda Talentów** - wymaga dojrzałych danych o kompetencjach
+- **Anonimizacja D&I** - wartościowe, ale nie blokuje rekrutacji
+- **OKR** - wymaga buy-in od zarządu i zmiany kultury
+- **Retention AI** - wymaga min. 12 miesięcy danych historycznych
+- **9-box Grid** - uzupełnia Retention AI
+
+**Won't Have (poza MVP):**
+- **Kafeteria benefitowa** - wymaga integracji z wieloma dostawcami
+- **Program Alumni** - nice-to-have, niski priorytet biznesowy
+
+---
