@@ -308,7 +308,7 @@ Tomek zarządza 12-osobowym zespołem sprzedaży. Potrzebuje prostych narzędzi 
 
 #### Założenia techniczne
 
-| ID        | Założenie | Ryzyko jeśli nieprawdziwe |
+| ID        | Założenie                                                                                            | Ryzyko jeśli nieprawdziwe               |
 |-----------|------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | **ZT-01** | Użytkownicy korzystają z nowoczesnych przeglądarek (Chrome, Firefox, Edge - ostatnie 2 wersje)       | Stare przeglądarki = problemy z UI      |
 | **ZT-02** | Dostępne stabilne łącze internetowe min. 10 Mbps                                                     | Wolne łącze = timeout przy uploadzie CV |
@@ -364,28 +364,28 @@ Tomek zarządza 12-osobowym zespołem sprzedaży. Potrzebuje prostych narzędzi 
 │  🔍 [Szukaj stanowiska...]        📍 Lokalizacja ▼   🎯 Filtruj │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ 💼 Senior Python Developer              📍 Warszawa     │   │
-│  │    TechCorp Sp. z o.o.                  💰 18-24k PLN  │   │
-│  │    Python • FastAPI • PostgreSQL        📅 do 15.01    │   │
-│  │    [Zobacz szczegóły]              [⭐ Zapisz]        │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ 💼 Senior Python Developer                 📍 Warszawa    │  │
+│  │    TechCorp Sp. z o.o.                     💰 18-24k PLN  │  │
+│  │    Python • FastAPI • PostgreSQL           📅 do 15.01    │  │
+│  │    [Zobacz szczegóły]                      [⭐ Zapisz]    │  │
+│  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ 💼 HR Business Partner                  📍 Kraków       │   │
-│  │    BigFactory S.A.                      💰 12-15k PLN  │   │
-│  │    HR • Rekrutacja • HRIS               📅 do 20.01    │   │
-│  │    [Zobacz szczegóły]              [⭐ Zapisz]        │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ 💼 HR Business Partner                     📍 Kraków      │  │
+│  │    BigFactory S.A.                         💰 12-15k PLN  │  │
+│  │    HR • Rekrutacja • HRIS                  📅 do 20.01    │  │
+│  │    [Zobacz szczegóły]                      [⭐ Zapisz]    │  │
+│  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ 💼 Junior Frontend Developer            📍 Remote       │   │
-│  │    StartupXYZ                           💰 8-12k PLN   │   │
-│  │    React • TypeScript • CSS             📅 do 10.01    │   │
-│  │    [Zobacz szczegóły]              [⭐ Zapisz]        │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ 💼 Junior Frontend Developer               📍 Remote      │  │
+│  │    StartupXYZ                              💰 8-12k PLN   │  │
+│  │    React • TypeScript • CSS                📅 do 10.01    │  │
+│  │    [Zobacz szczegóły]                      [⭐ Zapisz]    │  │
+│  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
-│  [Pokaż więcej ofert...]                                       │
+│  [Pokaż więcej ofert...]                                        │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -394,42 +394,42 @@ Tomek zarządza 12-osobowym zespołem sprzedaży. Potrzebuje prostych narzędzi 
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  ← Wróć do listy                                               │
+│  ← Wróć do listy                                                │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  💼 Senior Python Developer                                    │
-│  ═══════════════════════════════════════                       │
+│  💼 Senior Python Developer                                     │
+│  ═══════════════════════════════════════                        │
 │                                                                 │
-│  TechCorp Sp. z o.o.    📍 Warszawa (hybrydowo)               │
-│  💰 18 000 - 24 000 PLN netto (B2B)                           │
-│  📅 Rekrutacja do: 15 stycznia 2025                           │
+│  TechCorp Sp. z o.o.    📍 Warszawa (hybrydowo)                 │
+│  💰 18 000 - 24 000 PLN netto (B2B)                             │
+│  📅 Rekrutacja do: 15 stycznia 2025                             │
 │                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ Dopasowanie do Twojego profilu: ████████████░░ 78%      │   │
-│  │ ✓ Python (Twój poziom: Expert)                          │   │
-│  │ ✓ FastAPI (Twój poziom: Mid)                            │   │
-│  │ ⚠ Kubernetes (brak w profilu)                           │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ Dopasowanie do Twojego profilu: ████████████░░ 78%        │  │
+│  │ ✓ Python (Twój poziom: Expert)                            │  │
+│  │ ✓ FastAPI (Twój poziom: Mid)                              │  │
+│  │ ⚠ Kubernetes (brak w profilu)                             │  │
+│  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
-│  📋 OPIS STANOWISKA                                            │
-│  Szukamy doświadczonego Python Developera do zespołu          │
-│  platformy płatniczej. Będziesz pracować nad...               │
-│  [Pokaż więcej...]                                             │
+│  📋 OPIS STANOWISKA                                             │
+│  Szukamy doświadczonego Python Developera do zespołu            │
+│  platformy płatniczej. Będziesz pracować nad...                 │
+│  [Pokaż więcej...]                                              │
 │                                                                 │
 │  🎯 WYMAGANIA                                                   │
-│  • 5+ lat doświadczenia z Python                              │
-│  • Znajomość FastAPI lub Django                                │
-│  • Doświadczenie z PostgreSQL                                  │
-│  • Mile widziane: Kubernetes, AWS                              │
+│  • 5+ lat doświadczenia z Python                                │
+│  • Znajomość FastAPI lub Django                                 │
+│  • Doświadczenie z PostgreSQL                                   │
+│  • Mile widziane: Kubernetes, AWS                               │
 │                                                                 │
 │  🎁 OFERUJEMY                                                   │
-│  • Praca hybrydowa (2 dni w biurze)                            │
-│  • Budżet szkoleniowy 5000 PLN/rok                             │
-│  • Prywatna opieka medyczna                                    │
+│  • Praca hybrydowa (2 dni w biurze)                             │
+│  • Budżet szkoleniowy 5000 PLN/rok                              │
+│  • Prywatna opieka medyczna                                     │
 │                                                                 │
-│  ┌───────────────────────────────────────────────────────────┐ │
-│  │  [     📤 APLIKUJ TERAZ     ]    [⭐ Zapisz] [📤 Udostępnij] │ │
-│  └───────────────────────────────────────────────────────────┘ │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │  [   📤 APLIKUJ TERAZ   ]   [⭐ Zapisz]  [📤 Udostępnij]  │  │
+│  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -438,44 +438,44 @@ Tomek zarządza 12-osobowym zespołem sprzedaży. Potrzebuje prostych narzędzi 
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  ← Wróć do oferty                                              │
+│  ← Wróć do oferty                                               │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  📤 Aplikujesz na: Senior Python Developer                     │
-│     TechCorp Sp. z o.o.                                        │
-│  ═══════════════════════════════════════                       │
+│  📤 Aplikujesz na: Senior Python Developer                      │
+│     TechCorp Sp. z o.o.                                         │
+│  ═══════════════════════════════════════                        │
 │                                                                 │
 │  📄 TWOJE CV                                                    │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ ✓ Jan_Kowalski_CV_2024.pdf                              │   │
-│  │   Dodane: 10.12.2024    [Zmień CV]                      │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ ✓ Jan_Kowalski_CV_2024.pdf                                │  │
+│  │   Dodane: 10.12.2024    [Zmień CV]                        │  │
+│  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
-│  📝 LIST MOTYWACYJNY (opcjonalnie)                             │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                                                          │   │
-│  │  Napisz kilka słów o sobie i dlaczego                   │   │
-│  │  interesujesz się tą ofertą...                          │   │
-│  │                                                          │   │
-│  │                                                          │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                             0/2000 znaków      │
+│  📝 LIST MOTYWACYJNY (opcjonalnie)                              │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │                                                           │  │
+│  │  Napisz kilka słów o sobie i dlaczego                     │  │
+│  │  interesujesz się tą ofertą...                            │  │
+│  │                                                           │  │
+│  │                                                           │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                                              0/2000 znaków      │
 │                                                                 │
-│  💰 OCZEKIWANIA FINANSOWE                                      │
-│  [    15000    ] PLN netto/mies.                               │
+│  💰 OCZEKIWANIA FINANSOWE                                       │
+│  [    15000    ] PLN netto/mies.                                │
 │                                                                 │
 │  📅 DOSTĘPNOŚĆ                                                  │
-│  ○ Natychmiast                                                 │
-│  ● 2 tygodnie                                                  │
-│  ○ 1 miesiąc                                                   │
-│  ○ Inna: [________]                                            │
+│  ○ Natychmiast                                                  │
+│  ● 2 tygodnie                                                   │
+│  ○ 1 miesiąc                                                    │
+│  ○ Inna: [________]                                             │
 │                                                                 │
-│  ☑ Wyrażam zgodę na przetwarzanie danych osobowych...         │
-│  ☑ Chcę otrzymywać podobne oferty pracy                       │
+│  ☑ Wyrażam zgodę na przetwarzanie danych osobowych...           │
+│  ☑ Chcę otrzymywać podobne oferty pracy                         │
 │                                                                 │
-│  ┌───────────────────────────────────────────────────────────┐ │
-│  │         [     ✓ WYŚLIJ APLIKACJĘ     ]                   │ │
-│  └───────────────────────────────────────────────────────────┘ │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │         [     ✓ WYŚLIJ APLIKACJĘ     ]                    │  │
+│  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -487,26 +487,26 @@ Tomek zarządza 12-osobowym zespołem sprzedaży. Potrzebuje prostych narzędzi 
 │                                                                 │
 │                         ✓                                       │
 │                                                                 │
-│              Twoja aplikacja została wysłana!                  │
+│              Twoja aplikacja została wysłana!                   │
 │                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                                                          │   │
-│  │  Senior Python Developer @ TechCorp                      │   │
-│  │                                                          │   │
-│  │  Status: ● WYSŁANA                                       │   │
-│  │  Data aplikacji: 12.12.2024, 14:32                       │   │
-│  │                                                          │   │
-│  │  ═══════════════════════════════════════                 │   │
-│  │  ● Wysłana  →  ○ W ocenie  →  ○ Rozmowa  →  ○ Decyzja   │   │
-│  │  ═══════════════════════════════════════                 │   │
-│  │                                                          │   │
-│  │  Rekruter skontaktuje się z Tobą w ciągu 5 dni          │   │
-│  │  roboczych. Włącz powiadomienia, żeby nie przegapić     │   │
-│  │  wiadomości!                                             │   │
-│  │                                                          │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │                                                           │  │
+│  │  Senior Python Developer @ TechCorp                       │  │
+│  │                                                           │  │
+│  │  Status: ● WYSŁANA                                        │  │
+│  │  Data aplikacji: 12.12.2024, 14:32                        │  │
+│  │                                                           │  │
+│  │  ═══════════════════════════════════════                  │  │
+│  │  ● Wysłana  →  ○ W ocenie  →  ○ Rozmowa  →  ○ Decyzja     │  │
+│  │  ═══════════════════════════════════════                  │  │
+│  │                                                           │  │
+│  │  Rekruter skontaktuje się z Tobą w ciągu 5 dni            │  │
+│  │  roboczych. Włącz powiadomienia, żeby nie przegapić       │  │
+│  │  wiadomości!                                              │  │
+│  │                                                           │  │
+│  └───────────────────────────────────────────────────────────┘  │
 │                                                                 │
-│  [🔔 Włącz powiadomienia]    [📋 Moje aplikacje]    [🏠 Start] │
+│  [🔔 Włącz powiadomienia]   [📋 Moje aplikacje]   [🏠 Start]     │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -1601,5 +1601,155 @@ def schedule_interview(candidate_email, recruiter_email, datetime_utc, duration_
 | **7 (Niski)** | Modyfikowalność (WNF-MOD-*) | Inwestycja w przyszłość, nie blokuje MVP |
 | **8 (Niski)** | Testowalność (WNF-TEST-*) | Ważne, ale coverage można budować iteracyjnie |
 
----
+
+## 6. Odkrywanie i Analiza Wymagań
+
+### 6.1. Analiza Porównawcza (Benchmarking)
+
+#### Krok 1: Identyfikacja Konkurencji i Wzorców
+
+Zidentyfikowaliśmy następujące podmioty rozwiązujące podobne problemy:
+
+**Konkurencja bezpośrednia (kompleksowe systemy HR):**
+
+| System | Opis | Rynek docelowy |
+|--------|------|----------------|
+| **Workday HCM** | Lider rynku enterprise HR, pełen cykl życia pracownika | Duże korporacje (5000+ pracowników) |
+| **SAP SuccessFactors** | Moduły rekrutacji, onboardingu, rozwoju, analityki | Enterprise, mid-market |
+| **BambooHR** | HR dla SMB, przyjazny UX | Małe i średnie firmy (do 1000 pracowników) |
+| **Personio** | Europejski HR dla SMB, silny w DACH | SMB w Europie |
+
+**Konkurencja pośrednia (specjaliści w poszczególnych obszarach):**
+
+| System | Specjalizacja | Mocne strony |
+|--------|---------------|--------------|
+| **Greenhouse** | ATS (rekrutacja) | Świetny UX, integracje, structured hiring |
+| **Lever** | ATS + CRM kandydatów | Nurturing kandydatów, employer branding |
+| **Lattice** | Performance management, OKR, feedback | Continuous feedback, 1:1s, engagement |
+| **15Five** | Feedback i engagement | Pulse surveys, recognition |
+| **LinkedIn Recruiter** | Sourcing kandydatów | Dostęp do bazy kandydatów |
+
+**Wzorce funkcjonalne (inspiracje z innych domen):**
+
+| System | Funkcja do zaadaptowania |
+|--------|--------------------------|
+| **Uber** | Real-time tracking statusu |
+| **Duolingo** | Gamifikacja onboardingu |
+| **Spotify** | Personalizowane rekomendacje (szkolenia) |
+| **Amazon** | One-click apply |
+
+#### Krok 2: Kryteria Oceny
+
+Ocenialiśmy konkurencję w skali 1-5 (1=słabo, 5=doskonale) w następujących kategoriach:
+
+**Tabela porównawcza:**
+
+| Kryterium | Workday | SAP SF | BambooHR | Personio | Greenhouse | Lattice | HRflow (cel) |
+|-----------|---------|--------|----------|----------|------------|---------|--------------|
+| **FUNKCJONALNOŚĆ** | | | | | | | |
+| Rekrutacja (ATS) | 4 | 4 | 3 | 3 | 5 | 2 | 4 |
+| Onboarding | 4 | 4 | 4 | 4 | 2 | 2 | 5 |
+| Performance/Feedback | 4 | 4 | 2 | 3 | 1 | 5 | 4 |
+| Analityka predykcyjna | 3 | 4 | 1 | 2 | 2 | 3 | 4 |
+| LMS/Rozwój | 4 | 5 | 1 | 2 | 1 | 3 | 4 |
+| Integracje | 5 | 5 | 4 | 4 | 5 | 4 | 3 |
+| **UX** | | | | | | | |
+| Prostota użycia | 2 | 2 | 5 | 4 | 4 | 5 | 5 |
+| Mobile experience | 3 | 3 | 4 | 4 | 3 | 5 | 4 |
+| Candidate Experience | 3 | 2 | 3 | 3 | 5 | - | 5 |
+| **MODEL BIZNESOWY** | | | | | | | |
+| Cena (dostępność dla SMB) | 1 | 1 | 4 | 4 | 3 | 3 | 5 |
+| Time to value | 1 | 1 | 4 | 3 | 4 | 4 | 4 |
+| **TECHNOLOGIA** | | | | | | | |
+| AI/ML capabilities | 4 | 4 | 1 | 2 | 3 | 3 | 4 |
+| API/Extensibility | 4 | 3 | 3 | 3 | 5 | 4 | 4 |
+| RODO compliance | 4 | 4 | 4 | 5 | 4 | 4 | 5 |
+
+#### Krok 3: Synteza Wyników
+
+**Co konkurencja robi dobrze:**
+
+1. **Greenhouse** - najlepszy Candidate Experience
+   - Przejrzysty portal kandydata
+   - Structured hiring (scorecards, interview kits)
+   - Integracja z 400+ narzędziami
+   - **Wniosek dla HRflow:** Priorytetyzujemy Portal Kandydata (WF-REK-003)
+
+2. **Lattice** - lider w continuous feedback
+   - Prosty UX do dawania feedbacku
+   - Integracja ze Slackiem
+   - Pulse surveys
+   - **Wniosek dla HRflow:** Implementujemy integrację Slack/Teams (WF-DEV-003-04)
+
+3. **Workday/SAP** - zaawansowana analityka
+   - Predykcja rotacji
+   - Dashboardy dla zarządu
+   - **Wniosek dla HRflow:** Retention AI jako differentiator (WF-ANA-001)
+
+4. **BambooHR** - prostota
+   - Intuicyjny interfejs
+   - Szybkie wdrożenie
+   - **Wniosek dla HRflow:** UX jako priorytet, WCAG compliance
+
+**Słabe punkty konkurencji (nasze szanse):**
+
+| Słaby punkt | Kogo dotyczy | Nasza odpowiedź |
+|-------------|--------------|-----------------|
+| Brak gamifikacji onboardingu | Wszyscy | WF-ONB-002 - zgrywalizowany moduł wdrożeniowy |
+| Semantic matching tylko w enterprise | SMB bez dostępu | WF-REK-002 - demokratyzujemy AI matching |
+| Drogi, długie wdrożenie | Workday, SAP | Docker-compose deployment, Time to Value < 1 tydzień |
+| Słaba rekrutacja wewnętrzna | Większość | WF-REK-004 - Giełda Talentów |
+| Brak real-time tracking dla kandydatów | Większość ATS | WF-REK-003 - Portal Kandydata z live updates |
+
+**Unikalne funkcje konkurencji do rozważenia:**
+
+| Funkcja | System | Ocena |
+|---------|--------|-------|
+| Video interviews | Greenhouse, Lever | Rozważamy w v2 |
+| Skills assessment | TestGorilla (integracja) | Integracja, nie build |
+| Background checks | Checkr (integracja) | Integracja |
+| Compensation benchmarking | Lattice, Workday | Could Have, dane zewnętrzne |
+
+#### Wnioski z analizy - wpływ na wymagania
+
+Na podstawie analizy porównawczej podjęliśmy następujące decyzje:
+
+**Dodane/wzmocnione wymagania:**
+
+| Wymaganie | Źródło inspiracji | Zmiana |
+|-----------|-------------------|--------|
+| WF-REK-003 (Portal Kandydata) | Greenhouse | Podwyższony priorytet do Must Have |
+| WF-DEV-003-04 (Integracja Slack) | Lattice | Dodany scenariusz |
+| WF-ONB-002 (Gamifikacja) | Duolingo pattern | Rozbudowany o system XP i badge'y |
+| WNF-UZ-04 (Time on task ≤3min) | Amazon one-click | Dodana metryka |
+
+**Świadomie pominięte funkcje:**
+
+| Funkcja | Powód pominięcia |
+|---------|------------------|
+| Video interviews (built-in) | Integracja z Zoom/Teams wystarczy, nie budujemy video infra |
+| Payroll | Poza zakresem, integracja z dedykowanymi systemami |
+| Time tracking | Zbyt wiele komplikacji prawnych, osobny rynek |
+
+**Pozycjonowanie HRflow vs. konkurencja:**
+
+```
+                  CENA
+                    ↑
+         Drogi      │      Workday
+        (Enterprise)│      SAP SF
+                    │
+                    │         Greenhouse
+                    │         Lever
+        ────────────┼────────────────────→ FUNKCJONALNOŚĆ
+                    │  Personio    Pełny cykl życia
+         BambooHR   │  HRflow ←── (nasz cel)
+                    │
+        Tani (SMB)  │
+                    │
+```
+
+**Nasza unikalna propozycja wartości:**
+
+> *"HRflow to pierwszy system HR dla firm 100-1000 pracowników, który łączy inteligentne dopasowanie kandydatów (AI Matching), gamifikowany onboarding i predykcyjną analitykę retencji - funkcje dotąd dostępne tylko w drogich rozwiązaniach enterprise - w przystępnej cenie i z wdrożeniem w tydzień."*
 
